@@ -3,17 +3,13 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular2/core.dart';
-
-class Hero {
-  final int id;
-  String name;
-
-  Hero(this.id, this.name);
-}
+import 'hero.dart';
+import 'hero_detail_component.dart';
 
 @Component(
     selector: 'my-app',
     templateUrl: 'app_component.html',
+    directives: const [HeroDetailComponent],
     styles: const [
       '''
   .selected {
@@ -63,11 +59,12 @@ class Hero {
     border-radius: 4px 0px 0px 4px;
   }
 '''
-])
+]
+)
 class AppComponent {
-  String title = 'Tour of Heroes';
-  Hero selectedHero;
+  final String title = 'Tour of Heroes';
   final List<Hero> heroes = mockHeroes;
+  Hero selectedHero;
 
   onSelect(Hero hero){
     selectedHero = hero;
