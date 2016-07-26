@@ -1,4 +1,4 @@
-import 'hero.dart';
+import 'package:dart_angular2_tour_of_heroes/hero.dart';
 
 final List<Hero> mockHeroes = [
   new Hero(11, 'Mr. Nice'),
