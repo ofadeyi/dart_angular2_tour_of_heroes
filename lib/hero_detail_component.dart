@@ -4,8 +4,8 @@ import 'dart:html';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
-import 'package:dart_angular2_tour_of_heroes/hero.dart';
-import 'package:dart_angular2_tour_of_heroes/hero_service.dart';
+import 'hero.dart';
+import 'hero_service.dart';
 
 @Component(
     selector: 'my-hero-detail',

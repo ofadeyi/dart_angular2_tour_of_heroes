@@ -1,4 +1,5 @@
 // Copyright (c) 2016, ofadeyi. All rights reserved. Use of this source code
+
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 
@@ -11,7 +12,7 @@ import 'package:dart_angular2_tour_of_heroes/in_memory_data_service.dart';
 
 main() {
   bootstrap(AppComponent,
-      [provide(Client, useClass: InMemoryDataService)]
+      [ provide(Client, useClass: InMemoryDataService) ]
   // Using a real back end? Import browser_client.dart and change the above to
   // [provide(Client, useFactory: () => new BrowserClient(), deps: [])]
   );

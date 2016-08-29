@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:angular2/core.dart';
 import 'package:http/http.dart';
 
-import 'package:dart_angular2_tour_of_heroes/hero.dart';
-import 'package:dart_angular2_tour_of_heroes/mock_heroes.dart';
+import 'hero.dart';
+import 'mock_heroes.dart';
 
 
 @Injectable()
