@@ -19,6 +19,10 @@ class HeroService {
   Future<Hero> getHero(int id) async =>
       (await getHeroes()).firstWhere((hero) => hero.id == id);
 
+  Future<List<Hero>> getHeroesSlowly() {
+    return new Future.delayed(const Duration(seconds: 2), () => mockHeroes);
+  }
+
   Future<List<Hero>> getHeroes() async {
     try {
       final response = await _http.get(_heroesUrl);
@@ -29,10 +33,6 @@ class HeroService {
     } catch (e) {
       throw _handleError(e);
     }
-  }
-
-  Future<List<Hero>> getHeroesSlowly() {
-    return new Future.delayed(const Duration(seconds: 2), () => mockHeroes);
   }
 
   Future<Hero> update(Hero hero) async {
