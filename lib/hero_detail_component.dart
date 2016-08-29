@@ -31,4 +31,9 @@ class HeroDetailComponent implements OnInit {
   void goBack() {
     window.history.back();
   }
+
+  Future<Null> save() async {
+    await _heroService.update(hero);
+    goBack();
+  }
 }
